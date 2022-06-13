@@ -1,0 +1,94 @@
+@import url('open_sans.css');
+
+/* skins */
+
+.font-open-sans
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* styles */
+
+/* :root
+{
+    padding: 0 !important;
+    margin: 0 !important;
+} */
+
+body
+{
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-size: 100vw;
+
+    overflow: hidden;
+
+    -webkit-transition: all 5s ease;
+    -moz-transition: all 5s ease;
+    transition: all 5s ease;
+    
+    position: relative;
+}
+
+.state1
+{
+    background-size: 100vw;
+}
+.state2
+{
+    background-size: 105vw;
+}
+
+.date-time
+{
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+
+    color: rgb(29, 29, 29) !important;
+}
+
+.glassmorphism-div
+{
+    background: rgba(189, 189, 189, 0.65);
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    border: 1px solid rgba(87, 87, 87, 0.325);
+    border-radius: 2rem;
+
+    padding: 3rem;
+
+    /* text-align: center; */
+}
+
+.btn-previous
+{
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+}
+
+.btn-next
+{      
+    position: absolute;
+    top: 50vh;
+    right: 5vw;
+}
+
+.dropdown
+{
+    position: fixed !important;
+    z-index: 2 !important;
+}

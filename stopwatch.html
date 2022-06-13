@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Gigaclock. </title>
+
+        <link rel="icon" type="image/png" href="img/icon.png">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.js" integrity="sha512-dMiBqqEV5i3KqpAdsgQSSZ72DnNib7otY0X+b/Tnn1EmLym1dxuZ19csdZqBnfDniKd9bmNtzStQzuMrIa5Ngw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="css/font-awesome.css">
+
+    </head>
+
+    <body>        
+        <div class="dropdown mt-4 ms-4">
+            <button type="button" class="btn btn-outline-warning dropdown-toggle d-flex align-items-center font-open-sans" data-bs-toggle="dropdown">
+                <i class="fa fa-bars me-3" aria-hidden="true"></i> MENU
+            </button>
+            
+            <ul class="dropdown-menu">
+                <li> <a class="dropdown-item" href="index.html"> Clock </a> </li>
+                <li> <hr class="dropdown-divider"> </li>
+                <li> <a class="dropdown-item" href="#"> Stopwatch </a> </li>
+                <li> <a class="dropdown-item" href="timer.html"> Timer </a> </li>
+            </ul>
+        </div>
+        
+        <div class="date-time font-open-sans">
+            <div id="stopwatchDiv" class="glassmorphism-div">
+                <div class="row mb-4" style="text-align: center;">
+                    <div class="col"> <h1 class="hours-count display-1"></h1> </div>
+                    <div class="col"> <h1 class="display-1"> : </h1> </div>
+                    <div class="col"> <h1 class="minutes-count display-1"></h1> </div>
+                    <div class="col"> <h1 class="display-1"> : </h1> </div>
+                    <div class="col"> <h1 class="seconds-count display-1"></h1> </div>
+                </div>
+                
+                <div class="d-flex justify-content-center">
+                    <button type="button" onclick="timeStart()" class="start-stopwatch btn btn-outline-warning rounded-pill me-3" style="text-align: center;"> <i class="fa fa-play" aria-hidden="true"></i> </button>
+                    <button type="button" onclick="timeStop()" class="pause-stopwatch btn btn-outline-warning rounded-pill me-3" style="text-align: center;"> <i class="fa fa-pause" aria-hidden="true"></i> </button>
+                    <button type="button" onclick="timeReset()" class="reset-stopwatch btn btn-outline-warning rounded-pill" style="text-align: center;"> <i class="fa fa-refresh" aria-hidden="true"></i> </button>
+                </div>
+            </div>
+
+            <div class="glassmorphism-div mt-5">
+                <p id="trackTitle" class="h3 mb-4"></p>
+
+                <div class="d-flex justify-content-center">
+                    <button type="button" onclick="rewindAudio()" class="btn btn-outline-warning rounded-pill me-3" style="text-align: center;"> <i class="fa fa-fast-backward" aria-hidden="true"></i> </button>
+                    <button type="button" onclick="unpauseAudio()" class="btn btn-outline-warning rounded-pill me-3" style="text-align: center;"> <i class="fa fa-play" aria-hidden="true"></i> </button>
+                    <button type="button" onclick="pauseAudio()" class="btn btn-outline-warning rounded-pill me-3" style="text-align: center;"> <i class="fa fa-pause" aria-hidden="true"></i> </button>
+                    <button type="button" onclick="skipAudio()" class="btn btn-outline-warning rounded-pill" style="text-align: center;"> <i class="fa fa-fast-forward" aria-hidden="true"></i> </button>
+                </div>
+
+                <p id="playbackState" class="h6 mt-4" style="text-align: center;"></p>
+            </div>
+        </div>
+
+        <div class="background-buttons">
+            <button type="button" class="btn-previous btn btn-outline-warning rounded-pill" style="width:40px"> <i class="fa fa-angle-left"></i> </button>
+            <button type="button" class="btn-next btn btn-outline-warning rounded-pill" style="width:40px"> <i class="fa fa-angle-right"></i> </button>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="js/stopwatch.js"></script>
+    </body>
+</html>
