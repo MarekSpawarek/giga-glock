@@ -52,14 +52,14 @@ function counter()
         seconds++;
         $(".seconds-count").html(seconds);
 
-        if (seconds > 59)
+        if (seconds == 59)
         {
             minutes++;
             $(".minutes-count").html(minutes);
             seconds = 0;
         }
 
-        if (minutes > 59)
+        if (minutes == 59)
         {
             hours++;
             $(".hours-count").html(hours);
