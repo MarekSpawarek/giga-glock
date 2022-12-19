@@ -19,17 +19,25 @@ body
 {
     height: 100%;
 
+    /* background-image: url('https://na-pulpit.com/zdjecia/chapter-gra-fortnite-postacie.jpeg'); */
     background-size: cover;
     background-position: center;
     background-size: 100vw;
 
     overflow: hidden;
 
-    -webkit-transition: all 5s ease;
+     -webkit-transition: all 5s ease;
     -moz-transition: all 5s ease;
     transition: all 5s ease;
     
     position: relative;
+
+    /* background-image: linear-gradient(to right top, #4f4e4b, #4a4946, #444341, #3f3e3c, #3a3937, #413d37, #484138, #4f4538, #64543c, #776540, #8b7644, #9d8847); */
+    /* z-index: 2; */
+
+    /* background: rgb(2,0,36);
+    background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(124,124,152,1) 68%, rgba(0,212,255,1) 100%);  */
+
 }
 
 .state1
@@ -57,18 +65,52 @@ body
     top: 50%;
     left: 50%; */
 
-    color: rgb(29, 29, 29) !important;
+    /* color: rgb(241, 241, 241) !important; */
+    color: rgb(228, 228, 228) !important;
 }
 
-.glassmorphism-div
+.glassmorphism
 {
-    background: rgba(189, 189, 189, 0.65);
-    -webkit-backdrop-filter: blur(100px);
-    backdrop-filter: blur(100px);
-    border: 1px solid rgba(87, 87, 87, 0.325);
-    border-radius: 2rem;
+    /* background: rgba(104, 104, 104, 0.25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(104, 104, 104, 0.3); */
 
-    padding: 3rem;
+    background: rgba(36, 36, 36, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    -webkit-box-shadow: 8px 8px 55px 16px rgb(45, 46, 51);
+    /* -moz-box-shadow: 8px 8px 55px 16px rgba(66, 68, 90, 1); */
+    box-shadow: 8px 8px 55px 16px rgba(39, 39, 44, 0.918);
+
+    /* border-radius: 2rem; */
+
+    /* padding: 3rem; */
+
+    /* text-align: center; */
+}
+
+.glassmorphism:hover
+{
+    /* background: rgba(104, 104, 104, 0.25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(104, 104, 104, 0.3); */
+
+    background: rgba(0, 0, 0, 0.062);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.192);
+
+    -webkit-box-shadow: 8px 8px 55px 16px rgb(45, 46, 51);
+    /* -moz-box-shadow: 8px 8px 55px 16px rgba(66, 68, 90, 1); */
+    box-shadow: 8px 8px 55px 16px rgba(39, 39, 44, 0.918);
+
+    /* border-radius: 2rem; */
+
+    /* padding: 3rem; */
 
     /* text-align: center; */
 }
@@ -91,4 +133,6 @@ body
 {
     position: fixed !important;
     z-index: 2 !important;
+
+    padding: 0 !important;
 }

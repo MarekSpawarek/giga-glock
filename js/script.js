@@ -21,7 +21,7 @@ function changeBackground()
             slideIndex = 4;
             break;
         case 1:
-            document.body.style.backgroundImage = "url('img/backgrounds/paprotka.jpg')";
+            document.body.style.backgroundImage = "url('https://na-pulpit.com/zdjecia/chapter-gra-fortnite-postacie.jpeg')";
             break;
         case 2:
             document.body.style.backgroundImage = "url('img/backgrounds/aya_tsuyuno.jpg')";
@@ -49,7 +49,7 @@ function zoomBackground()
 zoomBackground();
 setInterval(zoomBackground, 5000);
 
-/* muza */
+// muza
 
 let audioIndex = 1;
 
@@ -64,37 +64,43 @@ const sound = new Howl
     },
     volume: 0.5,
     html5: true,
-    autoplay: true
+    loop: true,
+    // preload: true,
+    autoplay: true,
+    onload: true
 });
 
 function playAudio()
 {
-    $("#playbackState").html("Playing");
-
     switch (audioIndex)
     {
         case 0:
             audioIndex = 3;
             playAudio();
+            $("#playbackState").html("Playing");
             break;
         case 1:
             sound.stop();
             sound.play('audio1');
             $("#trackTitle").html("RUDE – Eternal Youth");
+            $("#playbackState").html("Playing");
             break;
         case 2:
             sound.stop();
             sound.play('audio2');
             $("#trackTitle").html("Jean-Michel Jarre – Oxygene pt. 8");
+            $("#playbackState").html("Playing");
             break;
         case 3:
             sound.stop();    
             sound.play('audio3');
             $("#trackTitle").html("Coldbrew – Lakeside Picnic");
+            $("#playbackState").html("Playing");
             break;
         case 4:
             audioIndex = 1;
             playAudio();
+            $("#playbackState").html("Playing");
             break;
     }
 }

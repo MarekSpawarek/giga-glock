@@ -16,7 +16,7 @@ setInterval(autoRefreshDate, 1000);
 function twoPlacesDate()
 {
     const getTime = new Date();
-    const getMonth = getTime.getMonth();
+    const getMonth = getTime.getMonth() + 1;
     
     for (let i=1; i<10; i++)
     {
