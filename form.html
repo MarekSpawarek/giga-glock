@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    </head>
+
+    <body>
+        <div class="topbar container-fluid p-2 bg-warning d-flex justify-content-end">
+            <form action="index.php" method="post">
+                <label class="me-2" for="passwd"> Login: </label><input type="password" name="passwd" class="form">
+                <input type="submit" name="login" class="btn btn-primary" value="&#8594">
+            </form>
+        </div>
+
+        <div class="date"></div>
+        <div class="clock"></div>
+
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/get_time_date.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
