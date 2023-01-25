@@ -100,7 +100,7 @@
                 $result = mysqli_query($conn, $sql);
 
                 $sql1 = "select lap, hours, minutes, seconds from laps;";
-                $result1 = mysqli_query($conn, $sql);
+                $result1 = mysqli_query($conn, $sql1);
 
                 $row = mysqli_fetch_assoc($result1);
 
