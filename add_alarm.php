@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'root', 'siema', 'alarms');
+    $conn = mysqli_connect('localhost', 'root', '', 'alarms');
 
     
 

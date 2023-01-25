@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'root', 'siema', 'stopwatch');
+    $conn = mysqli_connect('localhost', 'root', '', 'stopwatch');
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
@@ -10,6 +10,10 @@
         $sql = "insert into laps (hours, minutes, seconds) values ($hours, $minutes, $seconds);";
     	$result = mysqli_query($conn, $sql);
 
+        $sql = "select id, hours, minutes, seconds from laps;";
+        $result = mysqli_query($conn, $sql);
+
+        $row = mysqli_fetch_assoc($result))
 
         echo "
             <div id='lapTable' class='container'>
@@ -23,11 +27,11 @@
 
                     <tbody>
                         <tr>
-                            $id
+                            $row["id"];
                         </tr>
                         
                         <tr>
-                            $hours : $minutes : $seconds
+                            $row["hours"] : $row["minutes"] : $row["seconds"];
                         </tr>
                     </tbody>
                 </table>

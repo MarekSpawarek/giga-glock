@@ -9,11 +9,11 @@
 
 /* styles */
 
-/* :root
+:root
 {
     padding: 0 !important;
     margin: 0 !important;
-} */
+}
 
 body
 {
@@ -24,6 +24,14 @@ body
     background-repeat: no-repeat;
     
     overflow: hidden;
+}
+
+.topbar
+{
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    /* border: 4px solid paleturquoise; */
 }
 
 .btn-previous
@@ -49,4 +57,16 @@ body
 .stopwatch-display
 {
     width: 5vw;
+}
+
+.height-100vh
+{
+    height: 100vh;
+}
+
+.middle
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

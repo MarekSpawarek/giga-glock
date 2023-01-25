@@ -7,6 +7,6 @@
     }
     else
     {
-        include 'form.php';
+        include 'form.html';
     }
 ?>
