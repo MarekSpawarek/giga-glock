@@ -6,3 +6,7 @@ insert into users (password) values ('1df75881f71e2a25393d3089b668206f5d54d56f')
 create database alarms;
 use alarms;
 create table alarms (id int primary key auto_increment, due date, hour int(2), minutes int(2));
+
+create database stopwatch;
+use stopwatch;
+create table laps (id int primary key auto_increment, hours int(20), minutes int(20), seconds int(20));

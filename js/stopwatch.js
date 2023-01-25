@@ -5,24 +5,28 @@ let seconds = 0;
 let countTime = false;
 let executed = false;
 
-$(".hours-count").html(hours);
-$(".minutes-count").html(minutes);
-$(".seconds-count").html(seconds);
+$("#stopwatchBoxHours").html(hours);
+$("#stopwatchBoxMinutes").html(minutes);
+$("#stopwatchBoxSeconds").html(seconds);
+
+// console.log(hours);
+// console.log(minutes);
+// console.log(seconds);
 
 function timeStart()
 {    
     $("#pausedDiv").remove();
     executed = false;
 
-    if (countTime == false)
-    {
+    // if (countTime == false)
+    // {
         countTime = true;
         counter();
-    }
-    else
-    {
-        counter();
-    }
+    // }
+    // else
+    // {
+        // counter();
+    // }
 }
 
 function timeStop()
@@ -38,9 +42,13 @@ function timeReset()
     seconds = 0;
     countTime = false;
 
-    $(".hours-count").html(hours);
-    $(".minutes-count").html(minutes);
-    $(".seconds-count").html(seconds);
+    $("#stopwatchBoxHours").html(hours);
+    $("#stopwatchBoxMinutes").html(minutes);
+    $("#stopwatchBoxSeconds").html(seconds);
+
+    // console.log(hours);
+    // console.log(minutes);
+    // console.log(seconds);
 
     $("#pausedDiv").remove();
 }
@@ -50,19 +58,19 @@ function counter()
     if (countTime == true)
     {
         seconds++;
-        $(".seconds-count").html(seconds);
+        $("#stopwatchBoxSeconds").html(seconds);
 
         if (seconds == 59)
         {
             minutes++;
-            $(".minutes-count").html(minutes);
+            $("#stopwatchBoxMinutes").html(minutes);
             seconds = 0;
         }
 
         if (minutes == 59)
         {
             hours++;
-            $(".hours-count").html(hours);
+            $("#stopwatchBoxHours").html(hours);
             minutes = 0;
         }
     }
@@ -86,8 +94,31 @@ let createDivOnce =
                 $(paused).addClass("mt-5");
                 $(paused).addClass("h5");
                 $(paused).css("text-align", "center");
-                document.querySelector("#stopwatchDiv").appendChild(paused).innerHTML = "Time stopped.";
+                document.querySelector("body").appendChild(paused).innerHTML = "Time stopped.";
             }
         };
     }
 )();
+
+$("form").on("submit", function(e)
+{
+    var dataString = $(this).serialize();
+    // alert(dataString); return false;
+
+    $.ajax
+    ({
+        type: "GET",
+        url: "stopwatch.php",
+        data: dataString,
+        // success: function()
+        // {
+        //     $("#contact_form").html("<div id='message'></div>");
+        //     $("#message").html("<h2>Contact Form Submitted!</h2>").append("<p>We will be in touch soon.</p>").hide().fadeIn(1500, function()
+        //     {
+        //         $("#message");
+        //     });
+        // }
+    });
+
+    e.preventDefault();
+});
