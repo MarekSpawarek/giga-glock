@@ -58,11 +58,23 @@ function counter()
     if (countTime == true)
     {
         seconds++;
+
+        if (seconds < 10)
+        {
+            seconds = "0" + seconds;
+        }
+
         $("#stopwatchBoxSeconds").html(seconds);
 
         if (seconds == 59)
         {
             minutes++;
+
+            if (minutes < 10)
+            {
+                minutes = "0" + minutes;
+            }
+
             $("#stopwatchBoxMinutes").html(minutes);
             seconds = 0;
         }
@@ -70,6 +82,12 @@ function counter()
         if (minutes == 59)
         {
             hours++;
+
+            if (hours < 10)
+            {
+                hours = "0" + hours;
+            }
+
             $("#stopwatchBoxHours").html(hours);
             minutes = 0;
         }
@@ -100,25 +118,25 @@ let createDivOnce =
     }
 )();
 
-$("form").on("submit", function(e)
-{
-    var dataString = $(this).serialize();
-    // alert(dataString); return false;
+// $("form").on("submit", function(e)
+// {
+//     var dataString = $(this).serialize();
+//     // alert(dataString); return false;
 
-    $.ajax
-    ({
-        type: "GET",
-        url: "stopwatch.php",
-        data: dataString,
-        // success: function()
-        // {
-        //     $("#contact_form").html("<div id='message'></div>");
-        //     $("#message").html("<h2>Contact Form Submitted!</h2>").append("<p>We will be in touch soon.</p>").hide().fadeIn(1500, function()
-        //     {
-        //         $("#message");
-        //     });
-        // }
-    });
+//     $.ajax
+//     ({
+//         type: "GET",
+//         url: "stopwatch.php",
+//         data: dataString,
+//         // success: function()
+//         // {
+//         //     $("#contact_form").html("<div id='message'></div>");
+//         //     $("#message").html("<h2>Contact Form Submitted!</h2>").append("<p>We will be in touch soon.</p>").hide().fadeIn(1500, function()
+//         //     {
+//         //         $("#message");
+//         //     });
+//         // }
+//     });
 
-    e.preventDefault();
-});
+//     e.preventDefault();
+// });

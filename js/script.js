@@ -18,7 +18,7 @@ function changeBackground()
     switch (slideIndex)
     {
         case 0:
-            slideIndex = 4;
+            slideIndex = 3;
             break;
         case 1:
             document.body.style.backgroundImage = "url('img/backgrounds/wielka_plyta.jpg')";
@@ -30,9 +30,6 @@ function changeBackground()
             document.body.style.backgroundImage = "url('img/backgrounds/impresjonizm.jpg')";
             break;
         case 4:
-            document.body.style.backgroundImage = "url('img/backgrounds/laka.jpg')";
-            break;
-        case 5:
             slideIndex = 1;
             break;
     }
